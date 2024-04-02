@@ -18,7 +18,10 @@
   ```
 ## info:
 - `BIGSERIAL` generates a new unique value for column
-- _sql sequence_ - it is needed to create unique values. Only primary key is not enough. This has no transaction isolation, so several transactions cannot get the same values. The increments are also not rolled back. Without it is very hard to generate unique incrementing numbers (ref: https://stackoverflow.com/a/1649126/4150337)  
+- _sql sequence_ - it is needed to create unique values. Only primary key is not enough. This has no transaction isolation, so several transactions cannot get the same values. The increments are also not rolled back. Without it is very hard to generate unique incrementing numbers (ref: https://stackoverflow.com/a/1649126/4150337)
+- schemas:
+A database contains one or more named _schemas_, which in turn contain tables.
+- 
 
 # Misc:
 - Using script to launch locally: `./psql.sh`
