@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+psql () 
+{ 
+    psql postgres
+}
+psql
