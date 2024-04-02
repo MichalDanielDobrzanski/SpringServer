@@ -154,3 +154,71 @@
 2024-04-02T16:06:58.885+02:00  INFO 11225 --- [demo] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-04-02T16:06:58.885+02:00  INFO 11225 --- [demo] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-04-02T16:06:58.886+02:00  INFO 11225 --- [demo] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-02T16:11:19.214+02:00  INFO 11225 --- [demo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02T16:11:19.215+02:00  INFO 11225 --- [demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-02T16:11:19.216+02:00  INFO 11225 --- [demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-02T16:11:21.604+02:00  INFO 11756 --- [demo] [main] com.testproject.demo.DemoApplication     : Starting DemoApplication using Java 18.0.2 with PID 11756 (/Users/michaldobrzanski/Desktop/Spring/demo/target/classes started by michaldobrzanski in /Users/michaldobrzanski/Desktop/Spring/demo)
+2024-04-02T16:11:21.605+02:00  INFO 11756 --- [demo] [main] com.testproject.demo.DemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-02T16:11:21.933+02:00  INFO 11756 --- [demo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-02T16:11:21.943+02:00  INFO 11756 --- [demo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-04-02T16:11:22.189+02:00  INFO 11756 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-04-02T16:11:22.196+02:00  INFO 11756 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-02T16:11:22.196+02:00  INFO 11756 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-02T16:11:22.225+02:00  INFO 11756 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-02T16:11:22.225+02:00  INFO 11756 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 596 ms
+2024-04-02T16:11:22.292+02:00  INFO 11756 --- [demo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-02T16:11:22.377+02:00  INFO 11756 --- [demo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ef7fe923-302e-4f04-a0a0-434bf6f0f3ac user=SA
+2024-04-02T16:11:22.378+02:00  INFO 11756 --- [demo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-02T16:11:22.403+02:00  INFO 11756 --- [demo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-02T16:11:22.427+02:00  INFO 11756 --- [demo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-02T16:11:22.442+02:00  INFO 11756 --- [demo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-02T16:11:22.542+02:00  INFO 11756 --- [demo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-02T16:11:22.708+02:00  INFO 11756 --- [demo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-02T16:11:22.711+02:00  INFO 11756 --- [demo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02T16:11:22.716+02:00  WARN 11756 --- [demo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'studentController' defined in file [/Users/michaldobrzanski/Desktop/Spring/demo/target/classes/com/testproject/demo/student/StudentController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.testproject.demo.student.StudentService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-04-02T16:11:22.716+02:00  INFO 11756 --- [demo] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02T16:11:22.718+02:00  INFO 11756 --- [demo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-02T16:11:22.719+02:00  INFO 11756 --- [demo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-02T16:11:22.720+02:00  INFO 11756 --- [demo] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-02T16:11:22.726+02:00  INFO 11756 --- [demo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-02T16:11:22.737+02:00 ERROR 11756 --- [demo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.testproject.demo.student.StudentController required a bean of type 'com.testproject.demo.student.StudentService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.testproject.demo.student.StudentService' in your configuration.
+
+2024-04-02T16:11:49.558+02:00  INFO 11765 --- [demo] [main] com.testproject.demo.DemoApplication     : Starting DemoApplication using Java 18.0.2 with PID 11765 (/Users/michaldobrzanski/Desktop/Spring/demo/target/classes started by michaldobrzanski in /Users/michaldobrzanski/Desktop/Spring/demo)
+2024-04-02T16:11:49.559+02:00  INFO 11765 --- [demo] [main] com.testproject.demo.DemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-02T16:11:49.882+02:00  INFO 11765 --- [demo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-02T16:11:49.891+02:00  INFO 11765 --- [demo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-04-02T16:11:50.125+02:00  INFO 11765 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-04-02T16:11:50.132+02:00  INFO 11765 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-02T16:11:50.132+02:00  INFO 11765 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-02T16:11:50.162+02:00  INFO 11765 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-02T16:11:50.163+02:00  INFO 11765 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 580 ms
+2024-04-02T16:11:50.225+02:00  INFO 11765 --- [demo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-02T16:11:50.314+02:00  INFO 11765 --- [demo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:5bafcac4-464e-49f3-b5f1-ece4e47faf4f user=SA
+2024-04-02T16:11:50.316+02:00  INFO 11765 --- [demo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-02T16:11:50.344+02:00  INFO 11765 --- [demo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-02T16:11:50.371+02:00  INFO 11765 --- [demo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-02T16:11:50.388+02:00  INFO 11765 --- [demo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-02T16:11:50.492+02:00  INFO 11765 --- [demo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-02T16:11:50.656+02:00  INFO 11765 --- [demo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-02T16:11:50.658+02:00  INFO 11765 --- [demo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02T16:11:50.682+02:00  WARN 11765 --- [demo] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-02T16:11:50.869+02:00  INFO 11765 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-04-02T16:11:50.876+02:00  INFO 11765 --- [demo] [main] com.testproject.demo.DemoApplication     : Started DemoApplication in 1.516 seconds (process running for 1.683)
+2024-04-02T16:11:53.798+02:00  INFO 11765 --- [demo] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-02T16:11:53.798+02:00  INFO 11765 --- [demo] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-02T16:11:53.799+02:00  INFO 11765 --- [demo] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
