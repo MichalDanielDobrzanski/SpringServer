@@ -1,2 +1,2 @@
 #!/bin/bash
-psql postgres
+psql postgres -d maindb -U root
