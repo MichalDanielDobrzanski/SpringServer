@@ -13,8 +13,8 @@ public class StudentConfig {
     @Bean
     CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
         return args -> {
-            Student entity = new Student("helene", "email@email.com", LocalDate.of(2001, 2, 3), 19);
-            Student entity2 = new Student("alex", "alex@email.com", LocalDate.of(2004, 1, 5), 16);
+            Student entity = new Student("helene", "email@email.com", LocalDate.of(2001, 2, 3));
+            Student entity2 = new Student("alex", "alex@email.com", LocalDate.of(2004, 1, 5));
 
             // hibernate inserts into the db
             System.out.println("Inserted into repository");

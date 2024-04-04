@@ -37,6 +37,7 @@ A database contains one or more named _schemas_, which in turn contain tables.
   - an identifier property
   - must create getters and setters for POJO classes so Hibernate can read properties (default method names)
   - prefer non-final-class
+- `@Transient` is used for Persistent classes to skip adding them to the database
 
 # Misc:
 - Using script to launch locally: `./psql.sh`

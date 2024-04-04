@@ -3,6 +3,7 @@ package com.testproject.demo.student;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 // @Entity is for Hibernate
 @Entity(name = "Student")
@@ -52,28 +53,23 @@ public class Student {
     )
     private LocalDate localDate;
 
-    @Column(
-            name = "age",
-            nullable = false
-    )
+    @Transient
     private int age;
 
-    public Student(Long id, String name, String email, LocalDate localDate, int age) {
+    public Student(Long id, String name, String email, LocalDate localDate) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.localDate = localDate;
-        this.age = age;
     }
 
     public Student() {
     }
 
-    public Student(String name, String email, LocalDate localDate, int age) {
+    public Student(String name, String email, LocalDate localDate) {
         this.name = name;
         this.email = email;
         this.localDate = localDate;
-        this.age = age;
     }
 
     public Long getId() {
@@ -109,7 +105,7 @@ public class Student {
     }
 
     public int getAge() {
-        return age;
+        return Period.between(this.localDate, LocalDate.now()).getYears();
     }
 
     public void setAge(int age) {
