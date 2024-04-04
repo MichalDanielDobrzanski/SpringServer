@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+// @Entity is for Hibernate
 @Entity(name = "Student")
 @Table(
         name = "student",
@@ -57,6 +58,17 @@ public class Student {
     )
     private int age;
 
+    public Student(Long id, String name, String email, LocalDate localDate, int age) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.localDate = localDate;
+        this.age = age;
+    }
+
+    public Student() {
+    }
+
     public Student(String name, String email, LocalDate localDate, int age) {
         this.name = name;
         this.email = email;
@@ -64,4 +76,43 @@ public class Student {
         this.age = age;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public LocalDate getLocalDate() {
+        return localDate;
+    }
+
+    public void setLocalDate(LocalDate localDate) {
+        this.localDate = localDate;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
