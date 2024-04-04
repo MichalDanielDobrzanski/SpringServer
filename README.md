@@ -9,8 +9,13 @@
 4. installing pgAdmin: https://www.pgadmin.org/
 
 # API endpoint:
+GET:
 ```
 http://localhost:9090/api/v1/student
+```
+POST:
+```
+curl -X POST http://localhost:9090/api/v1/student -H "Content-Type: application/json" -d '{"name": "john", "email": "john@gmail.com", "localDate": "2001-02-02"}'
 ```
 
 # Postgres
@@ -29,7 +34,6 @@ http://localhost:9090/api/v1/student
 - _sql sequence_ - it is needed to create unique values. Only primary key is not enough. This has no transaction isolation, so several transactions cannot get the same values. The increments are also not rolled back. Without it is very hard to generate unique incrementing numbers (ref: https://stackoverflow.com/a/1649126/4150337)
 - schemas:
 A database contains one or more named _schemas_, which in turn contain tables.
-- 
 
 # Hibernate:
 - you need to create a Persistent class:
