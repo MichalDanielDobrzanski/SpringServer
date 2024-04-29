@@ -10,6 +10,20 @@
 3. running: `psql postgres`
 4. installing pgAdmin: https://www.pgadmin.org/
 
+# Installing
+-> maven -> install 
+or CMD:
+```bash
+./mvnw install
+
+```
+
+```
+cd target
+java -jar demo-0.0.1-SNAPSHOT.jar
+ java -jar demo-0.0.1-SNAPSHOT.jar --server.port=8081 
+```
+
 # API endpoint:
 
 GET:
@@ -32,7 +46,9 @@ curl -X DELETE http://localhost:9090/api/v1/student/1
 
 PUT:
 ```
-curl -X PUT http://localhost:9090/api/v1/student/1\?name\=Korwin\&email=korwin@gmail.com -H "Content-Type: application/json"
+curl -X PUT http://localhost:9090/api/v1/student/1\?name\=Korwin\&email=korwin@gmail.com -H "Content-Type: application/json" -v
+# without escape chars:
+curl -X PUT "http://localhost:9090/api/v1/student/1?name=Korwin&email=korwin@gmail.com" -H "Content-Type: application/json" -v
 ```
 
 # Postgres
@@ -70,3 +86,44 @@ curl -X PUT http://localhost:9090/api/v1/student/1\?name\=Korwin\&email=korwin@g
 # Misc:
 
 - Using script to launch locally: `./psql.sh`
+
+## Docker setup:
+- tutorial: https://www.youtube.com/watch?v=pg19Z8LL06w
+- spring: https://spring.io/guides/topicals/spring-boot-docker
+- https://medium.com/@saygiligozde/using-docker-compose-with-spring-boot-and-postgresql-235031106f9f
+
+1. From dockerfile;
+```sh
+docker pull nginx:1.25
+docker images
+docker run nginx:1.25
+# to run in background
+docker run -d nginx:1.25
+# to list running containers
+docker ps
+# to stop the container <> - is the container id
+docker stop <>
+# run with port binding to expose it to localhost
+docker run -d -p 9000:80 nginx:1.25
+# to list all containers (not running ones too)
+docker ps -a
+# to run with a name
+docker run --name web-spring -d -p 9000:80 nginx:1.25
+# 1. to build from Dockerfile
+docker build --tag 'demo_server' .
+# 2. to run
+docker run --name demo_server -d -p 9090:9090 demo_server
+# to open a shell for this container
+docker run -ti --entrypoint /bin/sh demo_server
+```
+
+2. From docker compose:
+```sh
+docker-compose down
+# or when to remove orphans too:
+docker compose down --remove-orphans
+docker rmi demo_server
+docker-compose up
+# or in background
+docker-compose up -d
+```
